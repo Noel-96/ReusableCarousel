@@ -18,7 +18,10 @@
 		4EA093A0288BCF7B00219818 /* ReusableCarouselUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0939F288BCF7B00219818 /* ReusableCarouselUITestsLaunchTests.swift */; };
 		4EA093AD288BDA5000219818 /* ApartmentPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA093AC288BDA5000219818 /* ApartmentPopupView.swift */; };
 		4EA093AF288BDA6500219818 /* ApartmentPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA093AE288BDA6500219818 /* ApartmentPopupView.xib */; };
-		4EA093B1288BDA7800219818 /* TenantCardSubmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA093B0288BDA7800219818 /* TenantCardSubmission.swift */; };
+		4EA093C52891565A00219818 /* ApplicationApartmentPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA093C42891565900219818 /* ApplicationApartmentPhotoCell.xib */; };
+		4EA093C7289156AD00219818 /* ApplicationApartmentPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA093C6289156AD00219818 /* ApplicationApartmentPhotoCell.swift */; };
+		4EA093CE2891DF0200219818 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA093CD2891DF0200219818 /* Extensions.swift */; };
+		4EA093D12892850200219818 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA093D02892850200219818 /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +57,11 @@
 		4EA0939F288BCF7B00219818 /* ReusableCarouselUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCarouselUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4EA093AC288BDA5000219818 /* ApartmentPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApartmentPopupView.swift; sourceTree = "<group>"; };
 		4EA093AE288BDA6500219818 /* ApartmentPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApartmentPopupView.xib; sourceTree = "<group>"; };
-		4EA093B0288BDA7800219818 /* TenantCardSubmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenantCardSubmission.swift; sourceTree = "<group>"; };
 		4EA093B2288BDA9300219818 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4EA093C42891565900219818 /* ApplicationApartmentPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplicationApartmentPhotoCell.xib; sourceTree = "<group>"; };
+		4EA093C6289156AD00219818 /* ApplicationApartmentPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationApartmentPhotoCell.swift; sourceTree = "<group>"; };
+		4EA093CD2891DF0200219818 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4EA093D02892850200219818 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +112,10 @@
 		4EA0937B288BCF7700219818 /* ReusableCarousel */ = {
 			isa = PBXGroup;
 			children = (
-				4EA093AC288BDA5000219818 /* ApartmentPopupView.swift */,
+				4EA093CF289273E400219818 /* data */,
+				4EA093CC2891DCA100219818 /* cells */,
+				4EA093CB2891DC9C00219818 /* view */,
+				4EA093C92891DA3200219818 /* utils */,
 				4EA0937C288BCF7700219818 /* AppDelegate.swift */,
 				4EA0937E288BCF7700219818 /* SceneDelegate.swift */,
 				4EA09380288BCF7700219818 /* ViewController.swift */,
@@ -114,8 +123,6 @@
 				4EA09385288BCF7A00219818 /* Assets.xcassets */,
 				4EA09387288BCF7A00219818 /* LaunchScreen.storyboard */,
 				4EA0938A288BCF7A00219818 /* Info.plist */,
-				4EA093AE288BDA6500219818 /* ApartmentPopupView.xib */,
-				4EA093B0288BDA7800219818 /* TenantCardSubmission.swift */,
 				4EA093B2288BDA9300219818 /* README.md */,
 			);
 			path = ReusableCarousel;
@@ -136,6 +143,40 @@
 				4EA0939F288BCF7B00219818 /* ReusableCarouselUITestsLaunchTests.swift */,
 			);
 			path = ReusableCarouselUITests;
+			sourceTree = "<group>";
+		};
+		4EA093C92891DA3200219818 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				4EA093CD2891DF0200219818 /* Extensions.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		4EA093CB2891DC9C00219818 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4EA093AE288BDA6500219818 /* ApartmentPopupView.xib */,
+				4EA093AC288BDA5000219818 /* ApartmentPopupView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4EA093CC2891DCA100219818 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				4EA093C6289156AD00219818 /* ApplicationApartmentPhotoCell.swift */,
+				4EA093C42891565900219818 /* ApplicationApartmentPhotoCell.xib */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		4EA093CF289273E400219818 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				4EA093D02892850200219818 /* DataSource.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +287,7 @@
 				4EA09386288BCF7A00219818 /* Assets.xcassets in Resources */,
 				4EA093AF288BDA6500219818 /* ApartmentPopupView.xib in Resources */,
 				4EA09384288BCF7700219818 /* Main.storyboard in Resources */,
+				4EA093C52891565A00219818 /* ApplicationApartmentPhotoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +312,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA093D12892850200219818 /* DataSource.swift in Sources */,
+				4EA093C7289156AD00219818 /* ApplicationApartmentPhotoCell.swift in Sources */,
 				4EA09381288BCF7700219818 /* ViewController.swift in Sources */,
 				4EA0937D288BCF7700219818 /* AppDelegate.swift in Sources */,
 				4EA093AD288BDA5000219818 /* ApartmentPopupView.swift in Sources */,
-				4EA093B1288BDA7800219818 /* TenantCardSubmission.swift in Sources */,
 				4EA0937F288BCF7700219818 /* SceneDelegate.swift in Sources */,
+				4EA093CE2891DF0200219818 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
