@@ -167,7 +167,7 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
         }
         return collectionView.dequeueReusableCell(withReuseIdentifier: customReuseIdentifier, for: indexPath) as! ApplicationApartmentPhotoCell
     }
-    //made some changes to this project 
+    //made some changes to this project chinaza commts
     
 
     //When a collection view item is clicked
