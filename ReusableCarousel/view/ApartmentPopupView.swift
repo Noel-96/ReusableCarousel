@@ -8,11 +8,19 @@
 import Foundation
 import UIKit
 
+struct Apartment : Codable {
+    
+    let title: String
+    let  room : String
+    let imageUrls: [String]
+}
+
 
 class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     private let customReuseIdentifier = "apartmentPhotoCell"
     
+    private let apartmentViewModel = ApartmentViewModel()
     
     var placeHolderImage = UIImage() {
         didSet {
@@ -21,6 +29,7 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
             }
         }
     }
+    
     
     var demoPhotosUrls: [String]  = 
     [
@@ -62,7 +71,8 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
     //required init function
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        commonInit(maintenancePhotosUrls: demoPhotosUrls)
+        commonInit(maintenancePhotosUrls: apartmentViewModel.demoPhotoUrls
+                    demoPhotosUrls)
         //set the collection delegate and datasource of the photos to self(update collection view when Apartment Popup view data updates)
         maintenancePhotos.delegate = self
         maintenancePhotos.dataSource = self
@@ -78,7 +88,7 @@ class ApartmentPopupView: UIView, UICollectionViewDelegate, UICollectionViewData
     }
 
     //custom initializer
-    func commonInit(maintenancePhotosUrls: [String]) {
+    func commonInit(demoPhotosUrls: [String]) {
         self.demoPhotosUrls = maintenancePhotosUrls
         
         guard let view = loadViewFromNib() else { return }
